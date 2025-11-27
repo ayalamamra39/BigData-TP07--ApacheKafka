@@ -1,0 +1,54 @@
+Microsoft Windows [Version 10.0.19045.6466]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\projectiot>pip install kafka-python
+Requirement already satisfied: kafka-python in c:\users\abdarrahman\appdata\local\programs\python\python313\lib\site-packages (2.3.0)
+
+C:\projectiot>
+C:\projectiot>python iotproducer.py
+C:\projectiot\iotproducer.py:17: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "timestamp": datetime.utcnow().isoformat() + "Z"
+Sent (1/10): {'sensor_id': 'sensor-3', 'temperature': 30.01, 'humidity': 72.63, 'timestamp': '2025-11-27T18:38:52.469806Z'}
+Sent (2/10): {'sensor_id': 'sensor-1', 'temperature': 32.83, 'humidity': 73.4, 'timestamp': '2025-11-27T18:38:53.575062Z'}
+Sent (3/10): {'sensor_id': 'sensor-3', 'temperature': 26.09, 'humidity': 75.86, 'timestamp': '2025-11-27T18:38:54.576163Z'}
+Sent (4/10): {'sensor_id': 'sensor-1', 'temperature': 26.75, 'humidity': 31.43, 'timestamp': '2025-11-27T18:38:55.577346Z'}
+Sent (5/10): {'sensor_id': 'sensor-1', 'temperature': 34.3, 'humidity': 79.38, 'timestamp': '2025-11-27T18:38:56.578564Z'}
+Sent (6/10): {'sensor_id': 'sensor-1', 'temperature': 32.33, 'humidity': 58.26, 'timestamp': '2025-11-27T18:38:57.580386Z'}
+Sent (7/10): {'sensor_id': 'sensor-1', 'temperature': 25.34, 'humidity': 61.31, 'timestamp': '2025-11-27T18:38:58.582173Z'}
+Sent (8/10): {'sensor_id': 'sensor-3', 'temperature': 25.27, 'humidity': 68.82, 'timestamp': '2025-11-27T18:38:59.583401Z'}
+Sent (9/10): {'sensor_id': 'sensor-2', 'temperature': 33.35, 'humidity': 65.93, 'timestamp': '2025-11-27T18:39:00.585111Z'}
+Sent (10/10): {'sensor_id': 'sensor-1', 'temperature': 27.56, 'humidity': 34.01, 'timestamp': '2025-11-27T18:39:01.586669Z'}
+Finished sending messages successfully!
+
+C:\projectiot>
+C:\projectiot>python iotconsumer.py
+Consumer started...
+Skipped non-JSON message: hiiiiiiiiiiiiiii kafka
+Skipped non-JSON message: hiiiiii
+Received: {'sensor_id': 'sensor-3', 'temperature': 27.27, 'humidity': 67.51, 'timestamp': '2025-11-27T18:17:37.005556Z'}
+Received: {'sensor_id': 'sensor-2', 'temperature': 29.4, 'humidity': 48.99, 'timestamp': '2025-11-27T18:17:43.155588Z'}
+Received: {'sensor_id': 'sensor-3', 'temperature': 27.49, 'humidity': 71.39, 'timestamp': '2025-11-27T18:17:44.157545Z'}
+Received: {'sensor_id': 'sensor-1', 'temperature': 31.55, 'humidity': 34.42, 'timestamp': '2025-11-27T18:17:46.160448Z'}
+Received: {'sensor_id': 'sensor-3', 'temperature': 28.44, 'humidity': 54.84, 'timestamp': '2025-11-27T18:17:50.166478Z'}
+Received: {'sensor_id': 'sensor-2', 'temperature': 25.02, 'humidity': 66.35, 'timestamp': '2025-11-27T18:17:51.168081Z'}
+Received: {'sensor_id': 'sensor-2', 'temperature': 28.03, 'humidity': 56.68, 'timestamp': '2025-11-27T18:17:59.181295Z'}
+Received: {'sensor_id': 'sensor-3', 'temperature': 24.46, 'humidity': 40.33, 'timestamp': '2025-11-27T18:18:01.183637Z'}
+Received: {'sensor_id': 'sensor-1', 'temperature': 31.57, 'humidity': 71.23, 'timestamp': '2025-11-27T18:18:06.191695Z'}
+Received: {'sensor_id': 'sensor-2', 'temperature': 33.27, 'humidity': 78.4, 'timestamp': '2025-11-27T18:18:10.196890Z'}
+Received: {'sensor_id': 'sensor-1', 'temperature': 22.53, 'humidity': 57.06, 'timestamp': '2025-11-27T18:18:11.198762Z'}
+Received: {'sensor_id': 'sensor-2', 'temperature': 23.28, 'humidity': 47.64, 'timestamp': '2025-11-27T18:18:12.200774Z'}
+Received: {'sensor_id': 'sensor-3', 'temperature': 30.85, 'humidity': 56.99, 'timestamp': '2025-11-27T18:18:13.202224Z'}
+Received: {'sensor_id': 'sensor-2', 'temperature': 22.56, 'humidity': 78.91, 'timestamp': '2025-11-27T18:18:16.206621Z'}
+Received: {'sensor_id': 'sensor-2', 'temperature': 25.17, 'humidity': 66.24, 'timestamp': '2025-11-27T18:18:17.208325Z'}
+Received: {'sensor_id': 'sensor-1', 'temperature': 25.64, 'humidity': 74.89, 'timestamp': '2025-11-27T18:18:18.209541Z'}
+Received: {'sensor_id': 'sensor-3', 'temperature': 28.56, 'humidity': 65.39, 'timestamp': '2025-11-27T18:18:19.210750Z'}
+Received: {'sensor_id': 'sensor-1', 'temperature': 29.78, 'humidity': 33.29, 'timestamp': '2025-11-27T18:18:20.212340Z'}
+Received: {'sensor_id': 'sensor-2', 'temperature': 27.19, 'humidity': 42.86, 'timestamp': '2025-11-27T18:18:21.213925Z'}
+Received: {'sensor_id': 'sensor-1', 'temperature': 23.23, 'humidity': 58.59, 'timestamp': '2025-11-27T18:18:22.215181Z'}
+Received: {'sensor_id': 'sensor-2', 'temperature': 31.04, 'humidity': 58.25, 'timestamp': '2025-11-27T18:18:23.216681Z'}
+Received: {'sensor_id': 'sensor-3', 'temperature': 29.0, 'humidity': 47.29, 'timestamp': '2025-11-27T18:18:25.219874Z'}
+Received: {'sensor_id': 'sensor-1', 'temperature': 23.71, 'humidity': 48.19, 'timestamp': '2025-11-27T18:18:31.229903Z'}
+Received: {'sensor_id': 'sensor-2', 'temperature': 22.32, 'humidity': 38.1, 'timestamp': '2025-11-27T18:18:33.233640Z'}
+Received: {'sensor_id': 'sensor-2', 'temperature': 32.54, 'humidity': 55.56, 'timestamp': '2025-11-27T18:18:34.235757Z'}
+Received: {'sensor_id': 'sensor-1', 'temperature': 24.61, 'humidity': 42.1, 'timestamp': '2025-11-27T18:18:37.239997Z'}
+Received: {'sensor_id': 'sensor-2', 'temperature': 34.41, 'humidity': 58.16, 'timestamp': '2025-11-27T18:18:38.244732Z'}
