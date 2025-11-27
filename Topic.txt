@@ -1,0 +1,9 @@
+Microsoft Windows [Version 10.0.19045.6466]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\kafka>.\bin\windows\kafka-topics.bat --create --topic tp7-iot --bootstrap-server localhost:9092 --partitions 3 --replication-factor 1
+Created topic tp7-iot.
+
+C:\kafka>
+C:\kafka>.\bin\windows\kafka-topics.bat --list --bootstrap-server localhost:9092
+tp7-iot
