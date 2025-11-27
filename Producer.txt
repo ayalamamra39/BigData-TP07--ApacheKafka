@@ -1,0 +1,6 @@
+Microsoft Windows [Version 10.0.19045.6466]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\kafka>.\bin\windows\kafka-console-producer.bat --topic tp7-iot --bootstrap-server localhost:9092
+>
+>hiiiiiiiiiiiiiii kafka
